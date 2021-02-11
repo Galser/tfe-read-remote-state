@@ -17,6 +17,8 @@ data "terraform_remote_state" "tfc_random_pet" {
 
 
 
+resource "random_pet" "local-demo" { }
+
 # Terraform >= 0.12
 output "remote-state-pet-demo" {
   value = data.terraform_remote_state.tfc_random_pet.outputs.demo
